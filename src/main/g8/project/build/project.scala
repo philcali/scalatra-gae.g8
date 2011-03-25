@@ -1,5 +1,7 @@
 import sbt._
 
-class MyProject(info: ProjectInfo) extends DefaultProject(info) {
-  // give the user a nice default project!
+class Project(info: ProjectInfo) extends AppengineProject(info) {
+  val scalatraVersion = "2.0.0.M3" 
+
+  lazy val scalatra = "org.scalatra" %% "scalatra" % scalatraVersion
 }
